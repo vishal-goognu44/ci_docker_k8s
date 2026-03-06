@@ -13,7 +13,7 @@ spec:
         app: flask-demo
     spec:
       imagePullSecrets:
-        - name: dh-secret
+        - name: dockerhub-secret
       containers:
       - name: cont1
         image: vickybulti/flask-demo:latest
