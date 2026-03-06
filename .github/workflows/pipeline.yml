@@ -120,7 +120,11 @@ jobs:
       - name: Configure kubeconfig
         run: |
           echo "${{ secrets.KUBECONFIG_DATA }}" | base64 -d > kubeconfig
-          export KUBECONFIG=$PWD/kubeconfig
+          echo "KUBECONFIG=$PWD/kubeconfig" >> $GITHUB_ENV
+
+      - name: Test cluster connection
+        run: |
+          kubectl get nodes
 
       - name: Deploy Application
         run: |
