@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello from Flask DevOps Pipeline!"
+    return "Hello New Image to be created"
 
 @app.route("/health")
 def health():
